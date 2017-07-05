@@ -1,0 +1,35 @@
+apt-get update && apt-get install git
+Salut Amlie,
+git clone https://github.com/pornin/TestSSLServer.git
+cd TestSSLServer/
+./build.sh 
+apt-get install mono-devel
+apt-get install mono-devel -y
+./build.sh 
+ls
+ls
+mono TestSSLServer.exe 
+dreamy_khorana
+git clone https://github.com/oltpbenchmark/website.git
+sudo apt-get install python-pip python-dev python-mysqldb rabbitmq-server
+apt-get install python-pip python-dev python-mysqldb rabbitmq-server
+sudo pip install -r requirements.txt
+pip install -r requirements.txt
+ls
+cd website/
+pip install -r requirements.txt
+pyton
+python -V
+apt-get install python3-pip
+sudo apt-get install libmysqlclient-dev
+apt-get install libmysqlclient-dev
+sudo apt-get install libmysqlclient-dev
+pip install -r requirements.txt
+apt-get install build-essentials
+apt-get install build-essential
+libffi
+apt-cache search libffi
+apt-get install libffi-dev
+pip install -r requirements.txt
+pip install -u -r requirements.txt
+pip install -U -r requirements.txt

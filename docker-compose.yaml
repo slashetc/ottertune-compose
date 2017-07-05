@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  rabbitmq:
+    image: rabbitmq:${EXCHANGE_RABBITMQ_TAG}
+    volumes: [ "data:/var/lib/rabbitmq" ]
+    ports: [ "15672:15672", "5672:5672" ]
+    environment:
+      RABBITMQ_DEFAULT_USER: ${EXCHANGE_RABBITMQ_USER}
+      RABBITMQ_DEFAULT_PASS: ${EXCHANGE_RABBITMQ_PASS}
+  db:
+    image: mysql:5.7
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: ottertune
+      MYSQL_USER: ottertune
+      MYSQL_PASSWORD: ottertune
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+volumes:
+  db_data:
+  data:
